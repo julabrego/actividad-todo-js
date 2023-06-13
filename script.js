@@ -12,6 +12,7 @@ const btn__buscar__tarea = document.getElementById("btn-buscar-tarea");
 
 let listaDeTareas = [];
 let arrayDeBotones = [];
+let listaElegida = "";
 
 btn.addEventListener("click", agregarTarea);
 btn__ascendente.addEventListener("click", ordenarAlfAscendente);
@@ -32,6 +33,7 @@ function agregarTarea() {
     parrafo += `</ul>`;
     textArea.innerHTML = parrafo; */
     imprimirTexto();
+    guardarLocal(listaElegida);
   }
 }
 function ordenarAlfAscendente() {
@@ -43,6 +45,7 @@ function ordenarAlfAscendente() {
     }
   });
   imprimirTexto();
+  guardarLocal(listaElegida);
 }
 
 function ordenarAlfDescendiente() {
@@ -54,6 +57,7 @@ function ordenarAlfDescendiente() {
     }
   });
   imprimirTexto();
+  guardarLocal(listaElegida);
 }
 function borrarItemDeLaLista() {
   /* let listaAuxiliar = []; */
@@ -68,6 +72,7 @@ function borrarItemDeLaLista() {
   );
   console.log(listaDeTareas);
   imprimirTexto();
+  guardarLocal(listaElegida);
 }
 /* function borrarTareaIndividual() {
   listaDeTareas = listaDeTareas.filter((item, i) => i != btn__borrar__tarea.id);
@@ -123,3 +128,9 @@ console.log(listaDeTareas);
 
 // ordenar datos numéricos
 /* listaDeTareas.sort((a, b) => b - a); */
+
+function limpiarLista() {
+  while (listaDeTareas.length > 0) {
+    listaDeTareas.pop();
+  }
+}
