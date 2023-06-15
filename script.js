@@ -32,6 +32,13 @@ btn__borrar.addEventListener("click", borrarItemDeLaLista);
 btn__buscar__tarea.addEventListener("click", buscarTareaEnLista);
 btn__refrescar.addEventListener("click", refrescarLista);
 
+const listaElegida = sessionStorage.getItem("listaElegida");
+
+if (listaElegida == "" || listaElegida == null) {
+  // Redirecciono al usuario a seleccion.html
+  document.location = "seleccion.html";
+}
+
 function agregarTarea() {
   if (validarTextoIngresado()) {
     listaDeTareas.push(text.value.trim());
