@@ -9,3 +9,9 @@ Crear un TODO list:
 - cada tarea debe tener un boton para ser borrada
 - se nesecita un buscador que necesite ingresar alguna palabra o tarea
   y que busque entre las tareas, filtrarlas y ver que es lo que consigue
+
+Persistencia
+
+- Se tiene que guardar la lista y que cuando se vuelva a ingresar a la aplicación se cargue lo último guardado
+- Al ingresar a la aplicación el usuario tiene que elegir una lista en la que quiere trabajar. Tiene que poder
+  crear una lista nueva o elegir de entre otras opciones que ya haya creado.

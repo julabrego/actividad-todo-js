@@ -16,7 +16,12 @@ let listaDeTareasJSON = JSON.stringify(listaDeTareas);
 let listaDeTareasRecuperadaDeLocalStorage = JSON.parse(
   localStorage.getItem("listaDeTareas")
 );
-listaDeTareas = listaDeTareasRecuperadaDeLocalStorage;
+
+listaDeTareas =
+  listaDeTareasRecuperadaDeLocalStorage == null
+    ? []
+    : listaDeTareasRecuperadaDeLocalStorage;
+
 let arrayDeBotones = document.querySelectorAll(".btn-borrar-tarea");
 imprimirTexto();
 
